@@ -1,0 +1,13 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        io.javalin/javalin {:mvn/version "4.6.0"}
+        org.slf4j/slf4j-simple {:mvn/version "1.8.0-beta4"}}
+ :aliases
+ {:test
+  {:extra-paths ["test"]
+   :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}
+                io.github.cognitect-labs/test-runner
+                {:git/tag "v0.5.0" :git/sha "48c3c67"}}}
+  :build {:deps {io.github.seancorfield/build-clj
+                 {:git/tag "v0.6.6" :git/sha "171d5f1"}}
+          :ns-default build}}}
